@@ -154,7 +154,7 @@ export default function ContactsPage() {
               Please try using a different keyword or check your spelling.
             </p>
             <img
-              src="/assets/notfound.png"
+              src="/assets/not.found.png"
               alt="No results found"
               className="w-64 h-64 object-contain opacity-90"
             />
