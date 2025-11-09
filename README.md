@@ -127,8 +127,6 @@ npm run test:e2e
 🧭 Future Enhancements
 ✅ CRUD operations for contacts
 
-🔄 Sync with external API (e.g., Google Contacts)
-
 ♿ Enhanced accessibility testing
 
 🧩 Infinite scroll mode (optional replacement for pagination)
@@ -137,13 +135,5 @@ npm run test:e2e
 
 🧑‍💻 Author
 Misbah Ilyas
-Full Stack Developer — React / Next.js / TypeScript
-📧 your.email@example.com
-🌐 LinkedIn | GitHub
 
-🖼️ Screenshots
-(Add app screenshots here once available — e.g., Contacts page, Keyboard navigation, Task view)
-
-🪄 License
-This project is open-source and available under the MIT License.
 ```
