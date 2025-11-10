@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import { useRouter } from "next/navigation"; // add this
+import { useRouter } from "next/navigation";
 import useContacts from "@/lib/hooks/usecontacts";
 import ContactItem from "@/Components/ContactItem/ContactItem";
 import { useVirtualizer } from "@tanstack/react-virtual";
@@ -74,19 +74,11 @@ export default function ContactsPage() {
             value={query}
             onChange={setQuery}
             placeholder="Search by name, email, phone or company..."
-            icon={
-              <svg viewBox="0 0 24 24" className="search__icon">
-                <g>
-                  <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z" />
-                </g>
-              </svg>
-            }
           />
           {query && (
             <button
               onClick={() => setQuery("")}
-              className="absolute left-125 top-10  text-3xl   transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
-              aria-label="Clear search"
+              className="absolute right-2 top-1/2 text-2xl transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
             >
               ×
             </button>
@@ -134,8 +126,8 @@ export default function ContactsPage() {
       </div>
 
       {/* List + Loader */}
-      <main className="flex-1  sm:p-6">
-        <div className="text-sm text-gray-600 mb-3  mt-4 lg:mt-1 text-center">
+      <main className="flex-1 sm:p-6">
+        <div className="text-sm text-gray-600 mb-3 mt-4 lg:mt-1 text-center">
           Showing {(page - 1) * perPage + 1}–{Math.min(page * perPage, total)} of{" "}
           {total.toLocaleString()} contacts
         </div>
@@ -149,10 +141,6 @@ export default function ContactsPage() {
             <h2 className="text-2xl font-semibold text-[#0084d1] mb-2">
               No results found for “{query || "your search"}”
             </h2>
-            <p className="text-gray-600 mb-6 max-w-md">
-              We couldn’t find any contacts matching your search. <br />
-              Please try using a different keyword or check your spelling.
-            </p>
             <img
               src="/assets/not.found.png"
               alt="No results found"
@@ -162,7 +150,7 @@ export default function ContactsPage() {
         ) : (
           <div
             ref={parentRef}
-            className=" w-full overflow-auto border border-gray-300 rounded shadow-sm"
+            className="w-full overflow-auto border border-gray-300 rounded shadow-sm"
             role="listbox"
             aria-label="Contacts list"
           >
@@ -186,16 +174,12 @@ export default function ContactsPage() {
                       width: "100%",
                       transform: `translateY(${virtualRow.start}px)`,
                     }}
-                    role="option"
-                    aria-selected={isSelected}
-                    tabIndex={isSelected ? 0 : -1}
-                    onClick={() => setSelectedIndex(virtualRow.index)}
                   >
                     <ContactItem
                       contact={contact}
                       isSelected={isSelected}
-                      onClick={() => setSelectedIndex(virtualRow.index)}
-                      onEnter={() => router.push(`/tasks/${contact.id}`)} // ← added routing here
+                      onClick={() => router.push(`/tasks/${contact.id}`)} // ← Navigate on click
+                      onEnter={() => router.push(`/tasks/${contact.id}`)} // ← Navigate on Enter
                     />
                   </div>
                 );

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import type { Task, Priority } from "../../models/taskModel";
+import type { Task, Priority } from "@/models/taskModel";
 
 const STORAGE_KEY = "tasktracker_tasks_v2";
 
@@ -59,7 +59,7 @@ export default function usetasks() {
   const updateTask = async (id: string, updates: Partial<Task>) => {
     const prev = tasks.find((t) => t.id === id);
     if (!prev) return { success: false, error: "Not found" };
-    const updated = {
+    const updated: Task = {
       ...prev,
       ...updates,
       updatedAt: new Date().toISOString(),
@@ -90,12 +90,20 @@ export default function usetasks() {
   const toggleTask = async (id: string) => {
     const prev = tasks.find((t) => t.id === id);
     if (!prev) return { success: false, error: "Not found" };
-    const updated = {
+
+    let newStatus: Task["status"];
+    if (prev.status === "pending") newStatus = "completed";
+    else if (prev.status === "completed") newStatus = "pending";
+    else newStatus = "in-progress";
+
+    const updated: Task = {
       ...prev,
-      status: prev.status === "completed" ? "pending" : "completed",
+      status: newStatus,
       updatedAt: new Date().toISOString(),
     };
+
     setTasks((all) => all.map((t) => (t.id === id ? updated : t)));
+
     try {
       await new Promise((res) => setTimeout(res, 100));
       return { success: true };

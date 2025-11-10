@@ -37,11 +37,7 @@ const AddTaskButton: React.FC<AddTaskProps> = ({
     setIsModalOpen(true);
   };
 
-  const handleSave = (data: {
-    dueDate?: string;
-    tags?: string[];
-    priority?: Priority;
-  }) => {
+  const handleSave = (data: { dueDate?: string; tags?: string[]; priority?: Priority }) => {
     onAddTask({ title, ...data });
     setTitle("");
     setError("");
@@ -79,7 +75,7 @@ const AddTaskButton: React.FC<AddTaskProps> = ({
         </div>
 
         {/* Button aligned properly */}
-        <div className="flex mt-2 sm:mt-0 sm:items-start w-full md:mt-3 xl:ml-3 sm:w-auto">
+        <div className="flex mt-2 sm:mt-0 sm:items-start w-full md:mt-3 lg:ml-7 sm:w-auto">
           <button
             onClick={handleOpenModal}
             className={`bg-sky-400 hover:bg-sky-500 outline-none text-white font-semibold px-6 py-4 rounded-full transition-colors duration-200 cursor-pointer w-full sm:w-auto ${buttonClassName}`}

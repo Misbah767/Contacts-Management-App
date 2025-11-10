@@ -19,11 +19,6 @@ export default function ContactItem({
 }: ContactItemProps) {
   const router = useRouter();
 
-  const handleTasksClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    router.push(`/tasks/${contact.id}`);
-  };
-
   return (
     <div
       id={contact.id}
@@ -36,7 +31,7 @@ export default function ContactItem({
         }
       }}
       className={`flex items-center outline-none justify-between p-4 rounded-lg cursor-pointer transition 
-        ${isSelected ? "bg-[#e0f2fe] border-none" : "bg-white hover:bg-[#f1faff]"}`}
+        ${isSelected ? "bg-[#e0f2fe]" : "bg-white hover:bg-[#f1faff]"}`}
     >
       <div className="flex items-center gap-4">
         <img
@@ -53,7 +48,10 @@ export default function ContactItem({
       </div>
 
       <button
-        onClick={handleTasksClick}
+        onClick={(e) => {
+          e.stopPropagation(); // prevent triggering row click
+          router.push(`/tasks/${contact.id}`);
+        }}
         className="px-4 py-2 bg-[#0084d1] hover:bg-[#006bb3] rounded-lg text-white font-medium transition shadow"
       >
         Tasks
