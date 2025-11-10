@@ -39,13 +39,15 @@ export default function usetasks() {
       title,
       description: options?.description,
       status: "pending",
-      dueAt: options?.dueDate,
+      dueAt: options?.dueDate ?? new Date().toISOString(), // ✅ default to now
       tags: options?.tags ?? [],
       priority: options?.priority ?? "Medium",
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };
+
     setTasks((prev) => [newTask, ...prev]);
+
     try {
       await new Promise((res) => setTimeout(res, 100));
       return { success: true, task: newTask };

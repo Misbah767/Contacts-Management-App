@@ -61,7 +61,7 @@ const AddTaskButton: React.FC<AddTaskProps> = ({
     <div className="mb-4 w-full flex flex-col sm:flex-row sm:items-start sm:gap-2">
       {/* Input with error message */}
       <div className="div flex flex-row justify-center align-center">
-        <div className="flex flex-col xl:ml-14 ">
+        <div className="flex flex-col lg:ml-11 ">
           <Input
             value={title}
             onChange={(v) => {
