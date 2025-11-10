@@ -49,7 +49,7 @@ export default function ContactItem({
 
       <button
         onClick={(e) => {
-          e.stopPropagation(); // prevent triggering row click
+          e.stopPropagation();
           router.push(`/tasks/${contact.id}`);
         }}
         className="px-4 py-2 bg-[#0084d1] hover:bg-[#006bb3] rounded-lg text-white font-medium transition shadow"
