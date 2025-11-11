@@ -61,5 +61,6 @@ npm run test
 
 npm run test:e2e
 
-🧑‍💻 Author
+Author
+
 Misbah Ilyas
