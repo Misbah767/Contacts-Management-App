@@ -195,7 +195,7 @@ export default function ContactsPage() {
                       isSelected={isSelected}
                       onClick={() => {
                         setSelectedIndex(virtualRow.index);
-                        router.push(`/tasks/${contact.id}`); // ✅ Navigate on full row click
+                        router.push(`/tasks/${contact.id}`); // Navigate on full row click
                       }}
                       onEnter={() => router.push(`/tasks/${contact.id}`)}
                     />

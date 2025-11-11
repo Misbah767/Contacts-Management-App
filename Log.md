@@ -1,6 +1,6 @@
 # LOG.md — Development Timeline & Work Notes
 
-## 🗓️ Phase 1 — Setup & Planning (Hour 0–2)
+## Phase 1 — Setup & Planning (Hour 0–2)
 
 - Initialized Next.js 14 project with TypeScript and Tailwind CSS.
 - Configured ESLint + Prettier for code consistency.
@@ -10,7 +10,7 @@
 
 ---
 
-## ⚙️ Phase 2 — Contacts Module (Hour 2–7)
+## Phase 2 — Contacts Module (Hour 2–7)
 
 - Implemented `generateContacts.ts` using **faker-js** to produce 10k+ mock contacts.
 - Built `useContacts` hook handling search, sort, and pagination.
@@ -30,7 +30,7 @@
 
 ---
 
-## 💅 Phase 4 — Reusable Components & UI Enhancements (Hour 12–15)
+## Phase 4 — Reusable Components & UI Enhancements (Hour 12–15)
 
 - Extracted reusable UI elements: `Button`, `Input`, `Loader`, and modals.
 - Applied **Tailwind CSS** for a clean and consistent interface.
@@ -39,7 +39,7 @@
 
 ---
 
-## 🧪 Phase 5 — Testing & Final Polish (Hour 15–19)
+## Phase 5 — Testing & Final Polish (Hour 15–19)
 
 - Added **Jest + React Testing Library** unit tests for hooks and components.
 - Added **Playwright E2E** test simulating full user flow (Contacts → Tasks CRUD).
