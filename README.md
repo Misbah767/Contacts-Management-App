@@ -36,18 +36,18 @@ A high-performance **Next.js 14 + React (TypeScript)** application for managing 
 
 ---
 
-### ⚙️ Setup & Run Locally
+### Setup & Run Locally
 
--git clone https://github.com/yourusername/contacts-management-app.git
--cd contacts-management-app
+- git clone https://github.com/yourusername/contacts-management-app.git
+- cd contacts-management-app
 
--2️⃣ Install dependencies
-npm install
+- Install dependencies
+  npm install
 
-- 3️⃣ Run development server
+- Run development server
 
--npm run dev
-Visit http://localhost:3000
+- npm run dev
+  Visit http://localhost:3000
 
 ### Unit tests (Jest + React Testing Library)
 
@@ -55,6 +55,10 @@ npm run test
 
 ### End-to-End tests (Playwright)
 
-npm run test:e2e
+### npm run test:e2e
+
+---
+
 Author
+
 Misbah Ilyas
