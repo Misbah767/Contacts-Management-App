@@ -4,25 +4,25 @@ A high-performance **Next.js 14 + React (TypeScript)** application for managing 
 
 ---
 
-## 🚀 Features
+## Features
 
-- ⚡ **Efficient rendering** of 10,000+ contacts via [`react-virtuoso`](https://virtuoso.dev/) virtualization.
-- 🔍 **Search** contacts by **name**, **email**, or **phone number**.
-- ↕️ **Sort** contacts by **name**, **email**, or **company** (ascending/descending).
-- 📄 **Pagination** with configurable items per page.
-- ⌨️ **Keyboard navigation**:
+- **Efficient rendering** of 10,000+ contacts via [`react-virtuoso`](https://virtuoso.dev/) virtualization.
+- **Search** contacts by **name**, **email**, or **phone number**.
+- **Sort** contacts by **name**, **email**, or **company** (ascending/descending).
+- **Pagination** with configurable items per page.
+- **Keyboard navigation**:
   - **↑ / ↓** → Move selection within the list
   - **← / →** → Navigate pages
   - **Enter** → Select and open contact tasks
-- 🧭 **Accessibility (a11y)**:
+- **Accessibility (a11y)**:
   - `role="listbox"` and `role="option"` for assistive technologies
   - Focused items automatically scrolled into view
-- 🌀 **Smooth scrolling** for seamless keyboard UX.
-- 📱 **Responsive design** — optimized for both mobile and desktop.
+- **Smooth scrolling** for seamless keyboard UX.
+- **Responsive design** — optimized for both mobile and desktop.
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 | Category       | Tools                                     |
 | -------------- | ----------------------------------------- |
@@ -36,31 +36,25 @@ A high-performance **Next.js 14 + React (TypeScript)** application for managing 
 
 ---
 
-## ⚙️ Setup & Run Locally
+### ⚙️ Setup & Run Locally
 
-git clone https://github.com/yourusername/contacts-management-app.git
-cd contacts-management-app
+-git clone https://github.com/yourusername/contacts-management-app.git
+-cd contacts-management-app
 
-# 2️⃣ Install dependencies
-
+-2️⃣ Install dependencies
 npm install
 
-# 3️⃣ Run development server
+- 3️⃣ Run development server
 
-npm run dev
+-npm run dev
 Visit http://localhost:3000
 
-bash
-Copy code
-
-# Unit tests (Jest + React Testing Library)
+### Unit tests (Jest + React Testing Library)
 
 npm run test
 
-# End-to-End tests (Playwright)
+### End-to-End tests (Playwright)
 
 npm run test:e2e
-
 Author
-
 Misbah Ilyas
